@@ -9,9 +9,11 @@ else:
 root = tk.Tk()
 
 def Btn():
-    print ('Click btn ')
-
+    print ("Oh ! Do you click on the button !!!")
+    print("Congratulations !!!")
 btn  = tk.Button (root, text = 'Click Here', bg = 'green', fg = 'black', command=Btn ) 
-btn.pack()
+
+
+btn.place(x= 200, y = 200)
 root.geometry('500x500')
 root.mainloop()
