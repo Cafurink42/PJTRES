@@ -1,11 +1,10 @@
 from random import * 
 
-typeAnumber = input("Digite um número")
+typeAnumber = int(input('Digite um número de 0 a 1:'))
 
+randomNum = round(random())
 
-
-if randomnum == 1:
-    print ('Deu sorte')
+if (typeAnumber == randomNum):
+    print ('Você deu sorte')
 else:
-    print ('Deu azar')
-
+    print ('Você deu azar')
