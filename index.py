@@ -6,30 +6,37 @@ else:
     import Tkinter as tk 
   
 
+
 root = tk.Tk()
 
-def btn(button):
-    if button == "Pizza":
-        output.config(text = 'Você não é nada saudável coleguinha !')
-
-    elif button ==  "Abobora":
-        output.config(text = 'Você é muito saudável coleguinha ! Parabéns !!!')
 
 
-question = tk.Label(root, text = 'O que você mais gosta de comer ?' , bg = 'blue')
+
+question = tk.Label(root, text = 'Write what you like eat ' , bg = 'blue')
 question.pack()
 
-answer_one = tk.Button(root, text  ='Pizza', bg ='red', command=lambda: btn("Pizza"))
-answer_one.pack()
-answer_two = tk.Button(root, text  ='Abobora', bg = 'orange', command=lambda:btn("Abobora")) #lambda passa argumento para a função
-                                                                                             #quando for chamado o botão
-answer_two.pack()
+def getData():
+    getdata = str(data.get())
+    Entry = getdata
+    if Entry == 'Pizza':
+        output.config(text = '{} Ecaa !! Nothing Health'.format(Entry))
+    elif Entry == 'Type something':
+        output.config(text = 'Please write something to eat')
+    else:
+        output.config(text = '{} Very Health ! Congratulations !!! '.format(Entry))
+
+data = tk.Entry(root,  bg  = 'yellow' )
+data.insert(0, 'Type something')
+data.pack()
+btn = tk.Button(root, text  = 'send', command=getData)
+btn.pack()
 
 output = tk.Label(root, text = '', bg = 'white' , width=100, height=40)
 output.pack()
 
-
-
-
 root.geometry('500x500')
+root.title('HealfhCARE')
 root.mainloop()
+
+
+
