@@ -19,11 +19,14 @@ def getData():
     getdata = str(data.get())
     Entry = getdata
     if Entry == 'Pizza':
-        output.config(text = 'Nothing Health')
+        output.config(text = '{} Ecaa !! Nothing Health'.format(Entry))
+    elif Entry == 'Type something':
+        output.config(text = 'Please write something to eat')
     else:
-        output.config(text = '{} Very Health ! Congratulations !!'.format(Entry))
+        output.config(text = '{} Very Health ! Congratulations !!! '.format(Entry))
 
-data = tk.Entry(root,  bg  = 'yellow')
+data = tk.Entry(root,  bg  = 'yellow' )
+data.insert(0, 'Type something')
 data.pack()
 btn = tk.Button(root, text  = 'send', command=getData)
 btn.pack()
@@ -33,7 +36,6 @@ output.pack()
 
 root.geometry('500x500')
 root.title('HealfhCARE')
-
 root.mainloop()
 
 
