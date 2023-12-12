@@ -8,13 +8,14 @@ def Teams():
     if len(player_list) < maxplayers:
             getName = (PlayeresNames.get())
             player_list.append(getName)
-            output.config(text  = '{}'.format(player_list))
-
+            update_output()
 
 def SortTeams():
       shuffle(player_list)
-      output.config(text = 'Time sorteado {}'.format(player_list))
+      update_output()
 
+def update_output():
+      output.config(text = ','.join(player_list))
 
 
 
@@ -28,12 +29,11 @@ Sortteam = tk.Button(root, text = 'Sort Team', command  = SortTeams)
 Sortteam.pack()
 
 
-output = tk.Label(root, bg = 'yellow', width= 50, height=10)
+output = tk.Label(root, bg = 'yellow', width= 80, height=10)
 output.pack()
 
 player_list = []
-maxplayers  = 5
-
+maxplayers  = 6
 
 
 
