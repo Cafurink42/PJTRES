@@ -4,11 +4,12 @@ import tkinter as tk
 root  = tk.Tk()
 
 def Teams():
-
     if len(player_list) < maxplayers:
             getName = (PlayeresNames.get())
             player_list.append(getName)
             update_output()
+    if getName == "":
+          output.config (text = 'Parece que você não digitou nenhum jogador. Por favor insira algum jogador')          
 
 def SortTeams():
       shuffle(player_list)
@@ -19,11 +20,12 @@ def update_output():
 
 
 
+
 title = tk.Label(root, text  = 'Insert your team')
 title.pack()
 PlayeresNames = tk.Entry(root, bg = 'gray')
 PlayeresNames.pack()
-FormTeams =  tk.Button(root, text = 'Send', command  = Teams)
+FormTeams =  tk.Button(root, text = 'Send Player', command  = Teams)
 FormTeams.pack()
 Sortteam = tk.Button(root, text = 'Sort Team', command  = SortTeams)
 Sortteam.pack()
