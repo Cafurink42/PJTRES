@@ -9,7 +9,7 @@ def Teams():
             player_list.append(getName)
             update_output()
     if getName == "":
-          output.config (text = 'Parece que você não digitou nenhum jogador. Por favor insira algum jogador')          
+          output.config (text = 'Parece que você não digitou nenhum jogador. Por favor insira algum jogador', fg  = 'red')          
 
 def SortTeams():
       shuffle(player_list)
