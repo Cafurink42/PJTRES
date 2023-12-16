@@ -1,5 +1,5 @@
 import sys 
-
+from tkinter import messagebox
 if sys.version_info[0] == 3:
     import tkinter as tk
 else:
@@ -21,7 +21,9 @@ def getData():
     if Entry == 'Pizza':
         output.config(text = '{} Ecaa !! Nothing Health'.format(Entry))
     elif Entry == 'Type something':
-        output.config(text = 'Please write something to eat')
+         messagebox.showwarning('Plase type something !')
+    elif Entry == '':
+        output.config(text = 'Plase type something ')
     else:
         output.config(text = '{} Very Health ! Congratulations !!! '.format(Entry))
 
