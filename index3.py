@@ -16,7 +16,11 @@ def SortTeams():
       output.config(text = 'Time sorteado {}'.format(player_list))
 
 
+bg = tk.PhotoImage(file = "./images/futebolsoccer.png")
 
+
+labelIMG = tk.Label(root, image = bg)
+labelIMG.place(x = 0, y = 0)
 
 title = tk.Label(root, text  = 'Insert your team')
 title.pack()
@@ -39,6 +43,6 @@ maxplayers  = 5
 
 
 root.title('Add Teams')
-root.geometry('500x600')
+root.geometry('400x600')
 root.config(background= 'green')
 root.mainloop()
